@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-    <title>طلب دعم | خيرات الدواء</title>
+    <title>طلب التبرع | خيرات الدواء</title>
     <meta content="" name="description">
     <meta content="" name="keywords">
 
@@ -56,26 +56,44 @@
         <section id="goal" class="about">
             <div class="container" data-aos="">
                 <div class="section-title">
-                    <h2 style="font-family: GESbold;">طلب دعم</h2>
+                    <h2 style="font-family: GESbold;">طلب تبرع</h2>
                     <hr>
                     <div style="text-align: right;">
-                        <form class="row g-3 float-end">
+                        <form  class="row g-3 float-end">
                             <h6 style="font-family: GESbold;color: cornflowerblue;">المعلومات الشخصية</h6>
                             <div class="col-md-6">
                                 <label for="inputName" class="form-label" style="font-family: GESlight;">الاسم</label>
                                 <input type="text" class="form-control" id="inputName" required>
                             </div>
                             <div class="col-md-6">
-                                <label for="inputId" class="form-label" style="font-family: GESlight;">الهوية الوطنية / الإقامة</label>
-                                <input type="text" class="form-control" id="inputId" maxlength="10" minlength="10" required>
+                                <label class="form-label" style="font-family: GESlight;">هل أنت</label><br>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="singal" required>
+                                    <label class="form-check-label" for="inlineRadio1" style="font-family: GESlight;">فرد</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="group">
+                                    <label class="form-check-label" for="inlineRadio2" style="font-family: GESlight;">مؤسسة</label>
+                                </div>
+                                <script>
+                                    var singal = document.getElementById("inlineRadio1");
+                                    var group = document.getElementById("inlineRadio2");
+                                    var pholder = document.getElementById("inputName");
+                                    singal.onclick = function() {
+                                        pholder.placeholder = "الاسم كاملا"
+                                    }
+                                    group.onclick = function() {
+                                        pholder.placeholder = "اسم المؤسسة"
+                                    }
+                                </script>
                             </div>
                             <div class="col-12">
                                 <label for="inputPhone" class="form-label" style="font-family: GESlight;">رقم الجوال</label>
                                 <input type="tel" class="form-control" id="inputPhone" placeholder="05XXXXXXXX" required>
                             </div>
                             <div class="col-12">
-                                <label for="inputcampany" class="form-label" style="font-family: GESlight;">الجمعية الخيرية التابع لها (اختياري)</label>
-                                <input type="text" class="form-control" id="inputcampany">
+                                <label for="inputEmail" class="form-label" style="font-family: GESlight;">البريد الالكتروني</label>
+                                <input type="email" class="form-control" id="inputEmail" placeholder="example@example.com" required>
                             </div>
                             <div class="col-md-6">
                                 <label for="inputCity" class="form-label" style="font-family: GESlight;">الشارع</label>
@@ -103,9 +121,58 @@
                             </div>
                             <hr>
                             <h6 style="font-family: GESbold;color: cornflowerblue;">معلومات الدواء</h6>
-                            <div class="col-md-12">
-                                <label for="inputImg" class="form-label" style="font-family: GESlight;">ارفق الوصفة الطبية</label>
-                                <input type="file" class="form-control" id="inputImg" required>
+                            <div class="col-md-6">
+                                <label for="inputMidican" class="form-label" style="font-family: GESlight;" required>اسم الدواء</label>
+                                <input type="text" class="form-control" id="inputidican">
+                            </div>
+                            <div class="col-md-6">
+                                <label for="inputCount" class="form-label" style="font-family: GESlight;">الكمية</label>
+                                <input type="number" class="form-control" id="inputCount" required>
+                            </div>
+                            <div class="col-12">
+                                <label for="inputExpiarDate" class="form-label" style="font-family: GESlight;">تاريخ انتهاء الصلاحية</label>
+                                <input type="date" class="form-control" id="inputcount" required>
+                            </div>
+
+                            <p style="font-family: GESbold;color: blue;cursor: pointer;" title="لاتزال تحت التطوير">+ اضافة المزيد من الادوية</a>
+                                <hr>
+                            <h6 style="font-family: GESbold;color: cornflowerblue;">طريقة التسليم</h6>
+                            <div class="col-md-6">
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="midSend" id="givePoint" value="givePoint" required>
+                                    <label class="form-check-label" for="givePoint" style="font-family: GESlight;">التسليم في مقر الجمعية حضورياَ</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="midSend" id="delivary" value="delivary">
+                                    <label class="form-check-label" for="delivary" style="font-family: GESlight;">طلب خدمة التوصيل</label>
+                                </div>
+                            </div>
+                            <hr>
+                            <h6 style="font-family: GESbold;color: cornflowerblue;">الشروط والمعايير</h6>
+                            <div class="col-12">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="cb1" style="float: right;" require>
+                                    <label class="form-check-label" for="cb1" style="font-family: GESlight;margin-right: 30px;">
+                                    اقر انا المدون بيناته بأن جميع الادوية التي اود تسليمها تم تخزينها بطرق التخزين المناسبة وفق الشركة الصانعة
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="cb2" style="float: right;"  require>
+                                    <label class="form-check-label" for="cb2" style="font-family: GESlight;margin-right: 30px;">
+                                    باقي على تاريخ الانتهاء 4 اشهر او اكثر
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="cb3" style="float: right;" require>
+                                    <label class="form-check-label" for="cb3" style="font-family: GESlight;margin-right: 30px;">
+                                    الادوية التي سوف يتم تسليمها غير خاضعة للرقابة او من الادوية المخدرة
+                                    </label>
+                                </div>
+                                <script>
+                                    document.getElementById("cb1").required = true;
+                                    document.getElementById("cb2").required = true;
+                                    document.getElementById("cb3").required = true;
+                                </script>
                             </div>
                             <div class="col-12">
                                 <button type="submit" class="btn btn-primary" style="font-family: GESmedium;">رفع الطلب</button>
