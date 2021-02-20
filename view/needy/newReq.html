@@ -59,53 +59,47 @@
                     <h2 style="font-family: GESbold;">طلب دعم</h2>
                     <hr>
                     <div style="text-align: right;">
-                        <form class="row g-3 float-end">
+                        <form action="../../model/config/needy.php" method="POST" class="row g-3 float-end">
                             <h6 style="font-family: GESbold;color: cornflowerblue;">المعلومات الشخصية</h6>
                             <div class="col-md-6">
                                 <label for="inputName" class="form-label" style="font-family: GESlight;">الاسم</label>
-                                <input type="text" class="form-control" id="inputName" required>
+                                <input type="text" class="form-control" id="inputName" name="name" required>
                             </div>
                             <div class="col-md-6">
                                 <label for="inputId" class="form-label" style="font-family: GESlight;">الهوية الوطنية / الإقامة</label>
-                                <input type="text" class="form-control" id="inputId" maxlength="10" minlength="10" required>
+                                <input type="text" class="form-control" id="inputId" name="nId" maxlength="10" minlength="10" required>
                             </div>
                             <div class="col-12">
                                 <label for="inputPhone" class="form-label" style="font-family: GESlight;">رقم الجوال</label>
-                                <input type="tel" class="form-control" id="inputPhone" placeholder="05XXXXXXXX" required>
+                                <input type="tel" class="form-control" id="inputPhone" name="phone" placeholder="05XXXXXXXX" required>
                             </div>
                             <div class="col-12">
                                 <label for="inputcampany" class="form-label" style="font-family: GESlight;">الجمعية الخيرية التابع لها (اختياري)</label>
-                                <input type="text" class="form-control" id="inputcampany">
+                                <input type="text" class="form-control" id="inputcampany" name="GF">
                             </div>
                             <div class="col-md-6">
                                 <label for="inputCity" class="form-label" style="font-family: GESlight;">الشارع</label>
-                                <input type="text" class="form-control" id="inputCity" required>
+                                <input type="text" class="form-control" id="inputCity" name="street" required>
                             </div>
                             <div class="col-md-4">
                                 <label for="inputState" class="form-label" style="font-family: GESlight;">المدينة</label>
-                                <select id="inputState" class="form-select" required>
+                                <select id="inputState" name="city" class="form-select" required>
                                     <option selected style="font-family: GESlight;">اختر المدينة</option>
-                                    <option>مكة المكرمة</option>
-                                    <option>المدينة المنورة</option>
-                                    <option>جدة</option>
-                                    <option>الرياض</option>
-                                    <option>الطائف</option>
-                                    <option>الباحة</option>
-                                    <option>الدمام</option>
-                                    <option>الخبر</option>
-                                    <option>تبوك</option>
-                                    <option>الجبيل</option>
+                                    <option value="makkah">مكة المكرمة</option>
+                                    <option value="madina">المدينة المنورة</option>
+                                    <option value="jeddah">جدة</option>
+                                    <option value="riyadh">الرياض</option>
                                 </select>
                             </div>
                             <div class="col-md-2">
                                 <label for="inputZip" class="form-label" style="font-family: GESlight;">الرمز البريدي</label>
-                                <input type="text" class="form-control" id="inputZip" required>
+                                <input type="text" class="form-control" id="inputZip" name="zip" required>
                             </div>
                             <hr>
                             <h6 style="font-family: GESbold;color: cornflowerblue;">معلومات الدواء</h6>
                             <div class="col-md-12">
                                 <label for="inputImg" class="form-label" style="font-family: GESlight;">ارفق الوصفة الطبية</label>
-                                <input type="file" class="form-control" id="inputImg" required>
+                                <input type="file" class="form-control" id="inputImg" name="file" required>
                             </div>
                             <div class="col-12">
                                 <button type="submit" class="btn btn-primary" style="font-family: GESmedium;">رفع الطلب</button>

@@ -47,7 +47,7 @@ if ($_SESSION) {
         </head>
 
         <body>
-            <nav class="navbar navbar-dark bg-primary">
+            <nav class="navbar navbar-dark bg-danger">
                 <div class="container">
                     <a class="navbar-brand">Danger User</a>
                 </div>

@@ -58,12 +58,19 @@
                 <div class="section-title">
                     <h2 style="font-family: GESbold;">تم تقديم الطلب بنجاح</h2>
                     <p style="font-family: GESmedium;font-size: 20px;color: cornflowerblue;">
-                        رقم العملية : <span> 654645648 </span>
+                        الرقم المرجعي : <span> 654645648 </span>
                     </p>
                 </div>
             </div>
+            <div style="font-family: GESmedium;font-size: 18px;text-align: center;">
+                <a class="btn" href="../../index.html" role="button" style="background-color: #2487ce;color: white;">العودة للصفحة
+                    الرئيسية
+                </a>
+            </div>
         </section>
     </main>
+
+
 
     <!-- ======= Footer ======= -->
     <footer id="footer">
@@ -91,7 +98,7 @@
                             </li>
                             <li><i class="bx bx-chevron-right"></i> <a href="https://www.socialthon.net/" style="font-family: GESlight;">السوشلثون</a></li>
                             <li><i class="bx bx-chevron-right"></i> <a href="view/general/aboutteam.html" style="font-family: GESlight;">فريق السوشلثون</a></li>
-                            <li><i class="bx bx-chevron-right"></i> <a href="view/general/policyScreen.html" style="font-family: GESlight;">الشروط والأحكام</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="../../view/general/policyScreen.html" style="font-family: GESlight;">الشروط والأحكام</a></li>
                             <li><i class="bx bx-chevron-right"></i> <a href="auth/login.php" style="font-family: GESlight;">دخول الموظفين</a></li>
                         </ul>
                     </div>
