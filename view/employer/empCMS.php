@@ -10,7 +10,7 @@ if ($_SESSION) {
             <meta charset="utf-8">
             <meta content="width=device-width, initial-scale=1.0" name="viewport">
         
-            <title>الشروط والأحكام | خيرات الدواء</title>
+            <title> Employers  | خيرات الدواء</title>
             <meta content="" name="description">
             <meta content="" name="keywords">
         
@@ -64,10 +64,12 @@ if ($_SESSION) {
                     <a class="navbar-brand" style="font-size:20px">أهلا ';
                         echo $_SESSION['name'];
                         echo '</a>
-                    <form class="d-flex">
+                    <div class="d-flex">
+                        <a href="" 
+                            style="text-align:center;color:white;font-weight:bold; text-decoration: none; margin: auto 20px;">التواصل مع الإدارة</a>
                         <a href="../../auth/logout.php" class="btn btn-success"
                             style="text-align:center;color:white;font-weight:bold">تسجيل الخروج</a>
-                    </form>
+                    </div>
                 </div>
             </nav>
             <div class="container mt-5 mb-5">

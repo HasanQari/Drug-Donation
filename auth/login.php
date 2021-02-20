@@ -14,7 +14,7 @@ if (count($_POST) > 0) {
         if ($row['role'] == 'manager') {
             header("Location:../view/admin/admin.php");
         } else {
-            header("Location:../view/employer/welcome.php");
+            header("Location:../view/employer/empCMS.php");
         }
     } else {
         $message = "Invalid Username or Password!";
@@ -120,7 +120,7 @@ if (count($_POST) > 0) {
                             <li><i class="bx bx-chevron-right"></i> <a href="https://www.socialthon.net/" style="font-family: GESlight;">السوشلثون</a></li>
                             <li><i class="bx bx-chevron-right"></i> <a href="../view/general/aboutteam.html" style="font-family: GESlight;">فريق السوشلثون</a></li>
                             <li><i class="bx bx-chevron-right"></i> <a href="../view/general/policyScreen.html" style="font-family: GESlight;">الشروط والأحكام</a></li>
-                            <li><i class="bx bx-chevron-right"></i> <a href="auth/login.php" style="font-family: GESlight;">دخول الموظفين</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#" style="font-family: GESlight;">دخول الموظفين</a></li>
                         </ul>
                     </div>
 
