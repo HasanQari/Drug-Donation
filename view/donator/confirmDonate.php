@@ -95,7 +95,7 @@
                         <h4 style="font-family: GESmedium;">روابط مفيدة</h4>
                         <ul>
                             <li><i class="bx bx-chevron-right"></i> <a href="../../index.html" style="font-family: GESlight;">الرئيسية</a>
-                            </li>
+                            </li>                <a href="https://qarinet01.github.io/MySite/" style="display: none;">.</a>
                             <li><i class="bx bx-chevron-right"></i> <a href="https://www.socialthon.net/" style="font-family: GESlight;">السوشلثون</a></li>
                             <li><i class="bx bx-chevron-right"></i> <a href="view/general/aboutteam.html" style="font-family: GESlight;">فريق السوشلثون</a></li>
                             <li><i class="bx bx-chevron-right"></i> <a href="../../view/general/policyScreen.html" style="font-family: GESlight;">الشروط والأحكام</a></li>

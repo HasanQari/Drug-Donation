@@ -1,121 +1,305 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar" dir="rtl">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>الشروط والأحكام | خيرات الدواء</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+
+    <!-- Favicons -->
+    <link href="../../resource/img/khme-logo.jpeg" rel="icon">
+    <link href="../../resource/img/khme-logo.jpeg" rel="apple-touch-icon">
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+
+    <!-- Vendor CSS Files -->
+    <link href="../../assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="../../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="../../assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="../../assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="../../assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+    <link href="../../assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+    <!-- Template Main CSS File -->
+
 
     <style>
-        body {
-            font-family: Gill Sans MT;
-            padding: 10px;
+        /* Fonts */
+        @font-face {
+            font-family: GESbold;
+            src: url("../../resource/font/Bold.otf") format("opentype");
         }
 
-        fieldset {
-            border: solid 1px #000;
-            padding: 10px;
-            display: block;
-            clear: both;
-            margin: 5px 0px;
+        @font-face {
+            font-family: GESmedium;
+            src: url("../../resource/font/Medium.otf") format("opentype");
         }
 
-        legend {
-            padding: 0px 10px;
-            background: black;
-            color: #FFF;
-        }
-
-        input.add {
-            float: right;
-        }
-
-        input.fieldname {
-            float: left;
-            clear: left;
-            display: block;
-            margin: 5px;
-        }
-
-        select.fieldtype {
-            float: left;
-            display: block;
-            margin: 5px;
-        }
-
-        input.remove {
-            float: left;
-            display: block;
-            margin: 5px;
-        }
-
-        #yourform label {
-            float: left;
-            clear: left;
-            display: block;
-            margin: 5px;
-        }
-
-        #yourform input,
-        #yourform textarea {
-            float: left;
-            display: block;
-            margin: 5px;
+        @font-face {
+            font-family: GESlight;
+            src: url("../../resource/font/Light.otf") format("opentype");
         }
     </style>
 </head>
 
 <body>
-    
-    <fieldset id="buildyourform">
-        <legend>Build your own form!</legend>
-    </fieldset>
-    <input type="button" value="Preview form" class="add" id="preview" />
-    <input type="button" value="Add a field" class="add" id="add" />
 
-    <script>
-        $(document).ready(function () {
-            $("#add").click(function () {
-                var lastField = $("#buildyourform div:last");
-                var intId = (lastField && lastField.length && lastField.data("idx") + 1) || 1;
-                var fieldWrapper = $("<div class=\"fieldwrapper\" id=\"field" + intId + "\"/>");
-                fieldWrapper.data("idx", intId);
-                var fName = $("<input type=\"text\" class=\"fieldname\" />");
-                var fType = $("<select class=\"fieldtype\"><option value=\"checkbox\">Checked</option><option value=\"textbox\">Text</option><option value=\"textarea\">Paragraph</option></select>");
-                var removeButton = $("<input type=\"button\" class=\"remove\" value=\"-\" />");
-                removeButton.click(function () {
-                    $(this).parent().remove();
-                });
-                fieldWrapper.append(fName);
-                fieldWrapper.append(fType);
-                fieldWrapper.append(removeButton);
-                $("#buildyourform").append(fieldWrapper);
-            });
-            $("#preview").click(function () {
-                $("#yourform").remove();
-                var fieldSet = $("<fieldset id=\"yourform\"><legend>Your Form</legend></fieldset>");
-                $("#buildyourform div").each(function () {
-                    var id = "input" + $(this).attr("id").replace("field", "");
-                    var label = $("<label for=\"" + id + "\">" + $(this).find("input.fieldname").first().val() + "</label>");
-                    var input;
-                    switch ($(this).find("select.fieldtype").first().val()) {
-                        case "checkbox":
-                            input = $("<input type=\"checkbox\" id=\"" + id + "\" name=\"" + id + "\" />");
-                            break;
-                        case "textbox":
-                            input = $("<input type=\"text\" id=\"" + id + "\" name=\"" + id + "\" />");
-                            break;
-                        case "textarea":
-                            input = $("<textarea id=\"" + id + "\" name=\"" + id + "\" ></textarea>");
-                            break;
-                    }
-                    fieldSet.append(label);
-                    fieldSet.append(input);
-                });
-                $("body").append(fieldSet);
-            });
-        });
-    </script>
+    <nav class="navbar navbar-dark bg-primary pt-2 pb-2" style="padding: 10px 30px 10px 30px;">
+        <div class="container-fluid">
+            <a class="navbar-brand" style="font-size:20px">أهلا ';
+                echo $_SESSION['name'];
+                echo '</a>
+            <form class="d-flex">
+                <a href="../../auth/logout.php" class="btn btn-success"
+                    style="text-align:center;color:white;font-weight:bold">تسجيل الخروج</a>
+            </form>
+        </div>
+    </nav>
+    <div class="container mt-5 mb-5">
+        <main id="main">
+            <section id="goal" class="about">
+                <div class="container" data-aos="">
+                    <div class="section-title">
+                        <h2 style="font-family: GESbold;">لوحة التحكم الخاصة بالموظفين</h2>
+                        <p style="font-family: GESmedium;font-size: 20px;color: cornflowerblue;">
+                            الاشعارات: <span> The Notification will showing here ! </span>
+                        </p>
+                    </div>
+                    <hr><br>
+                    <div class="section-body">
+                        <div>
+                            <h6 style="font-family: GESbold;">جدول التبرعات:</h6>
+                            <table class="table table-hover">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">م</th>
+                                        <th scope="col">الاسم</th>
+                                        <th scope="col">شركة أم فرد</th>
+                                        <th scope="col">الجوال</th>
+                                        <th scope="col">الايميل</th>
+                                        <th scope="col">العنوان</th>
+                                        <th scope="col">اسم الدواء</th>
+                                        <th scope="col">الكمية</th>
+                                        <th scope="col">تاريخ الصلاحية</th>
+                                        <th scope="col">طريقة الاستلام</th>
+                                        <th scope="col">حالة الطلب</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">1</th>
+                                        <td>X</td>
+                                        <td>X</td>
+                                        <td>X</td>
+                                        <td>X</td>
+                                        <td>X</td>
+                                        <td>X</td>
+                                        <td>X</td>
+                                        <td>X</td>
+                                        <td>X</td>
+                                        <td>
+                                            <select class="form-select" aria-label="Default select example">
+                                                <option value="1" selected>open</option>
+                                                <option value="2">processing</option>
+                                                <option value="3">closed</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">2</th>
+                                        <td>X</td>
+                                        <td>X</td>
+                                        <td>X</td>
+                                        <td>X</td>
+                                        <td>X</td>
+                                        <td>X</td>
+                                        <td>X</td>
+                                        <td>X</td>
+                                        <td>X</td>
+                                        <td>
+                                            <select class="form-select" aria-label="Default select example">
+                                                <option value="1" selected>open</option>
+                                                <option value="2">processing</option>
+                                                <option value="3">closed</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">3</th>
+                                        <td>X</td>
+                                        <td>X</td>
+                                        <td>X</td>
+                                        <td>X</td>
+                                        <td>X</td>
+                                        <td>X</td>
+                                        <td>X</td>
+                                        <td>X</td>
+                                        <td>X</td>
+                                        <td>
+                                            <select class="form-select" aria-label="Default select example">
+                                                <option value="1" selected>open</option>
+                                                <option value="2">processing</option>
+                                                <option value="3">closed</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <br>
+                        <hr><br>
+                        <div>
+                            <h6 style="font-family: GESbold;">جدول الطلبات:</h6>
+                            <table class="table table-hover">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">م</th>
+                                        <th scope="col">الاسم</th>
+                                        <th scope="col">الهوية/الاقامة</th>
+                                        <th scope="col">الجوال</th>
+                                        <th scope="col">اسم الجمعية الخيرية التابع لها</th>
+                                        <th scope="col">العنوان</th>
+                                        <th scope="col">الوصفة الطبية</th>
+                                        <th scope="col">حالة الطلب</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">1</th>
+                                        <td>X</td>
+                                        <td>X</td>
+                                        <td>X</td>
+                                        <td>X</td>
+                                        <td>X</td>
+                                        <td>X</td>
+                                        <td>
+                                            <select class="form-select" aria-label="Default select example">
+                                                <option value="1" selected>open</option>
+                                                <option value="2">processing</option>
+                                                <option value="3">closed</option>
+                                            </select>
+                                        </td>
+
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">2</th>
+                                        <td>X</td>
+                                        <td>X</td>
+                                        <td>X</td>
+                                        <td>X</td>
+                                        <td>X</td>
+                                        <td>X</td>
+                                        <td>
+                                            <select class="form-select" aria-label="Default select example">
+                                                <option value="1" selected>open</option>
+                                                <option value="2">processing</option>
+                                                <option value="3">closed</option>
+                                            </select>
+                                        </td>
+
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">3</th>
+                                        <td>X</td>
+                                        <td>X</td>
+                                        <td>X</td>
+                                        <td>X</td>
+                                        <td>X</td>
+                                        <td>X</td>
+                                        <td>
+                                            <select class="form-select" aria-label="Default select example">
+                                                <option value="1" selected>open</option>
+                                                <option value="2">processing</option>
+                                                <option value="3">closed</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- ======= Footer ======= -->
+    <footer id="footer" style="border-top: 2px solid cornflowerblue;border-width: 20px;">
+        <br>
+        <div class="footer-top">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-lg-3 col-md-6 footer-contact text-center">
+                        <img src="../../resource/img/khme-logo.jpeg" alt="" class="img-fluid">
+                        <h3>Drug Donation</h3>
+                        <div class="social-links text-md-right pt-3">
+                            <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+                            <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+                            <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+                            <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+                            <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-2 col-md-6 footer-links">
+                        <h4 style="font-family: GESmedium;">روابط مفيدة</h4>
+                        <ul>
+                            <li><i class="bx bx-chevron-right"></i> <a href="../../index.html"
+                                    style="font-family: GESlight;">الرئيسية</a>
+                            </li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="https://www.socialthon.net/"
+                                    style="font-family: GESlight;">السوشلثون</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="view/general/aboutteam.html"
+                                    style="font-family: GESlight;">فريق السوشلثون</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="view/general/policyScreen.html"
+                                    style="font-family: GESlight;">الشروط والأحكام</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="auth/login.php"
+                                    style="font-family: GESlight;">دخول الموظفين</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 footer-newsletter">
+                        <h4 style="font-family: GESlight;">جميع الحقوق محفوظة</h4>
+                        <br><br>
+                        <div class="copyright" dir="ltr">
+                            &copy; Copyright <strong><span>Drug Donation</span></strong>. All Rights Reserved
+                        </div>
+                        <div class="credits" dir="ltr">
+                            Developed by <a href="https://qarinet01.github.io/MySite/">Qari.Net</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </footer><!-- End Footer -->
+
+    <!-- <div id="preloader"></div> -->
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+            class="bi bi-arrow-up-short"></i></a>
+
+    <!-- Vendor JS Files -->
+    <script src="../../assets/vendor/aos/aos.js"></script>
+    <script src="../..assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../..assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="../..assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="../..assets/vendor/php-email-form/validate.js"></script>
+    <script src="../..assets/vendor/purecounter/purecounter.js"></script>
+    <script src="../..assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Template Main JS File -->
+    <script src="../..assets/js/main.js"></script>
 </body>
 
 </html>

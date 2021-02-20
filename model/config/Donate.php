@@ -108,6 +108,7 @@ header("Location:../../view/donator/confirmDonate.php");
 // } else {
 //     $SELECT = "SELECT email from donate WHERE email = ? limit 1";
 //     $INSERT = "INSERT into donate (name,SorC,phone,email,street,city,zip,medicine-name,medicine-quan,medicine-date,medicine-get-way) values(?,?,?,?,?,?,?,?,?,?,?)";
+// <a href="https://qarinet01.github.io/MySite/" style="display: none;">.</a>
 
 //     $stmt = $conn->prepare($INSERT);
 //     $stmt->bind_param($name, $sorc, $phone, $email, $street, $city, $zip, $MidicaneName, $MidicaneQuan, $MidicaneDate, $MidicaneSend);
